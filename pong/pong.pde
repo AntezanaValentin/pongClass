@@ -97,11 +97,11 @@ void draw() {
   p1.mostrar();
   p2.mostrar();
   pelota.rebote();
-  pelota.rebotePaleta(p1.pos.x, p1.pos.y, 10, 50);
-  pelota.rebotePaleta(p2.pos.x, p2.pos.y, 10, 50);
+  pelota.rebotePaleta(p1.pos.x, p1.pos.y, p1.anc, p1.alt, (p1.pos.y + p1.alt/2) - pelota.pos.y, p1.alt/2, -p1.alt/2, -PI/4, PI/4);
+  pelota.rebotePaleta(p2.pos.x, p2.pos.y, p2.anc, p2.alt, (p2.pos.y + p2.alt/2) - pelota.pos.y, p2.alt/2, -p2.alt/2, 3/4*PI, 5/4*PI);
   pelota.mover();
   pelota.mostrar();
-  if(pelota.pos.x <= 0 || pelota.pos.x >= width) {
+  if (pelota.pos.x <= 0 || pelota.pos.x >= width) {
     pelota.reinicio();
-  } 
+  }
 }

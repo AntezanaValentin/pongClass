@@ -1,5 +1,7 @@
 class Jugadores {
   float x, y;
+  float alt = 50;
+  float anc = 10;
   PVector pos;
   PVector vel = new PVector(0, 5);
 
@@ -16,6 +18,6 @@ class Jugadores {
   }
 
   void mostrar() {
-    rect(pos.x, pos.y, 10, 50);
+    rect(pos.x, pos.y, anc, alt);
   }
 }
